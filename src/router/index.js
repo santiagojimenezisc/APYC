@@ -23,13 +23,15 @@ router.beforeEach((to, from, next) => {
   var domain = 'santi.app';
   var pageToLoad = 'Home';
 
-  if (subdir !== damin && to.name !== pageToLoad) {
+  if (subdir !== domain && to.name !== pageToLoad) {
+    console.log(subdir + domain + pageToLoad);
     next({
       name: pageToLoad, params: {
 
       }
     })
   } else {
+    console.log(subdir + domain + pageToLoad);
     next()
   }
 })
