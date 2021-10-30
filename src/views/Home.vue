@@ -13,5 +13,11 @@ export default {
   components: {
     HelloWorld,
   },
+  mounted() {
+    var subdir = window.location.host.split(".")[0];
+    var domain = "localhost";
+    var pageToLoad = "Home";
+    console.log(subdir + domain + pageToLoad);
+  },
 };
 </script>
